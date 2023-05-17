@@ -42,6 +42,9 @@ person.getUserName()
 class IOSDeveloper:Person{
 var favLanguage:String?
     
+    override func getName() {
+        print("Overrided \(name)")
+    }
    func speakFavLanguage() {
         if let favLanguage = favLanguage {
             print("Fav language is \(favLanguage)")
@@ -54,4 +57,5 @@ var favLanguage:String?
 
 let isoDev = IOSDeveloper(name: "Hla Hla", age: 30, ocuupation: "Jr Dev", username: "Hla Hla")
 isoDev.favLanguage = "Rust"
+isoDev.getName()
 isoDev.speakFavLanguage()
